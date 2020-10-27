@@ -1,0 +1,41 @@
+﻿<Window x:Class="Imagen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Imagen"
+        mc:Ignorable="d"
+        Title="Imagen" Height="450" Width="800" Icon="32.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+            <Image Grid.RowSpan="2" x:Name="imagen" Source="episodioIV.jpg" />
+
+       
+        <StackPanel Grid.Row="0" Grid.Column="1" Height="200" Width="200">
+            <Label FontWeight="Bold" FontSize="20">Opacidad</Label>
+            <RadioButton x:Name="altaBoton" GroupName="opacidad" Content="Alta" IsChecked="True" Checked="altaBoton_Checked"></RadioButton>
+            <RadioButton x:Name="mediaBoton" GroupName="opacidad" Content="Media" Checked="mediaBoton_Checked"></RadioButton>
+            <RadioButton x:Name="bajaBoton" GroupName="opacidad" Content="Baja" Checked="bajaBoton_Checked"></RadioButton>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Height="200" Width="200">
+            <Label FontWeight="Bold" FontSize="20">Ajuste</Label>
+            <RadioButton x:Name="fillBoton" GroupName="ajustes" Content="Relleno(Fill)" IsChecked="True" Checked="fillBoton_Checked"/>
+            <RadioButton x:Name="uniformBoton" GroupName="ajustes" Content="Uniforme(Uniform)" Checked="uniformBoton_Checked"/>
+            <RadioButton x:Name="ufillBoton" GroupName="ajustes" Content="Relleno uniforme(Uniform Fill)" Checked="ufillBoton_Checked"></RadioButton>
+            <RadioButton x:Name="noneBoton" GroupName="ajustes" Content="Sin ajuste(None)" Checked="noneBoton_Checked"></RadioButton>
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>
